@@ -1,0 +1,43 @@
+/* Cover letter specific styling properties */
+body {
+	background-color: #f5f5f5;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	color: #333333;
+}
+
+.container {
+	height: auto;
+	max-width: 670px;
+	padding: 2em;
+	-moz-border-radius: 15px;
+		border-radius: 15px;
+	margin: 2em auto;
+	background-color: #FFF;
+}
+
+.container .intro {
+		margin-bottom: 3em;
+		line-height: 1.4em;
+		font-size: 16px;
+		text-align: left;
+	}
+		.container .intro h1 {
+			margin-top: 0;
+			font-size: 18px;
+			font-weight: bold;
+		}
+
+.container .outro {
+	display: block;
+	text-align: right;
+	margin-top: 3em;
+}
+
+.container .outro a {
+	color: rgb(88, 119, 181);
+}
+
+.sharing {
+	float: left;
+}

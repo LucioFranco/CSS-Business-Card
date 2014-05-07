@@ -1,0 +1,180 @@
+/* entire container, keeps perspective */
+.card-container {
+	perspective: 1000;	
+		-ms-perspective: 1000;
+		-moz-perspective: 1000;
+		-webkit-perspective: 1000;
+
+	transform-style: preserve-3d;
+		-ms-transform-style: preserve-3d;
+		-moz-transform-style: preserve-3d;
+		-webkit-transform-style: preserve-3d;
+}
+	.card-container.right-align {
+		margin-left: auto;
+		margin-right: 0;
+	}
+
+	.card-container.center {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	/*  UPDATED! flip the pane when hovered */
+	.card-container:active .back {
+		transform: rotateY(0deg);
+			-ms-transform: rotateY(0deg);
+			-webkit-transform: rotateY(0deg);
+			-moz-transform: rotateY(0deg);
+
+	}
+	.card-container:active .front {
+	    transform: rotateY(180deg);
+			-ms-transform: rotateY(180deg);
+			-webkit-transform: rotateY(180deg);
+			-moz-transform: rotateY(180deg);
+	}
+
+.card-container, .front, .back {
+	height: 320px;
+	width: 480px;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+			-ms-transform-style: preserve-3d;
+			-webkit-transform-style: preserve-3d;
+			-moz-transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+		-ms-backface-visibility: hidden;
+		-webkit-backface-visibility: hidden;
+		-moz-backface-visibility: hidden;
+	box-shadow: 5px 5px 2.5px #888888;
+	transition: 0.6s;
+	transform-style: preserve-3d;
+			-ms-transform-style: preserve-3d;
+			-webkit-transform-style: preserve-3d;
+			-moz-transform-style: preserve-3d;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/*  UPDATED! front pane, placed above back */
+.front {
+	background-color: rgb(88, 119, 181);
+	z-index: 2;
+	transform: rotateY(0deg);
+			-ms-transform: rotateY(0deg);
+			-webkit-transform: rotateY(0deg);
+			-moz-transform: rotateY(0deg);
+}
+
+.front .nav {
+	position: absolute;
+	padding-top: 1.85em;
+	padding-left: 1em;
+}
+
+.front .nav ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.front .nav li {
+}
+
+.front .nav .icon {
+	width: 48px;
+	height: 48px;
+	background-color: #e1e8ed;
+	opacity: .75;
+
+	transition:.5s;
+		-o-transition: background-color opacity .5s linear;
+    	-ms-transition: background-color opacity .5s linear;
+    	-moz-transition: background-color opacity .5s linear;
+     	-webkit-transition: background-color opacity .5s linear;
+}
+	.front .nav .icon:hover {
+		background-color: #f5f8fa;
+		opacity: 1;
+	}
+
+.front .title-entry, .front .info-entry {
+		padding-right: 1.75em;
+		text-align: right;
+	}
+	.front .title-entry, .front #job-title {
+		padding-top: 1.5em;
+	}
+
+	.front .title-entry {
+		color: #fff;
+		font-weight: bold;
+		font-size: 1.5rem;
+	}
+
+	.front .info-entry, a {
+		color: #ddd;
+		text-decoration: none;
+	}
+
+/* back, initially hidden pane */
+.back {
+	background-color: #DB4437;
+	transform: rotateY(-180deg);
+			-ms-transform: rotateY(-180deg);
+			-webkit-transform: rotateY(-180deg);
+			-moz-transform: rotateY(-180deg);
+}
+
+.back .back-img-caption {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.back .back-img-caption p {
+	text-align: center;
+	color: #fff;
+	font-style: italic;
+	font-size: 1.25rem;
+}
+
+/* 
+	Some vertical flip updates 
+*/
+.vertical.card-container {
+	position: relative;
+}
+
+	.vertical .back {
+		transform: rotateY(180deg);
+			-ms-transform: rotateY(180deg);
+			-webkit-transform: rotateY(180deg);
+			-moz-transform: rotateY(180deg);
+	}
+
+	.vertical.card-container:hover .back {
+	    transform: rotateY(0deg);
+			-ms-transform: rotateY(0deg);
+			-webkit-transform: rotateY(0deg);
+			-moz-transform: rotateY(0deg);
+	}
+
+	.vertical.card-container:hover .front {
+	    transform: rotateY(180deg);
+			-ms-transform: rotateY(180deg);
+			-webkit-transform: rotateY(180deg);
+			-moz-transform: rotateY(180deg);
+	}

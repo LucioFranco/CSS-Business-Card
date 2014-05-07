@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Business Card Demo</title>
+
+		<meta name="author" content="Anthony Del Ciotto">
+
+		<!-- Mobile browser stuff -->
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link href='//fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+		<link href="css/e-card.css" rel="stylesheet" type="text/css">
+		<link href="css/demo.css" rel="stylesheet" type="text/css">
+	</head>
+
+	<body>
+		<div class="container">
+
+			<div class="intro">
+			<h1> Pure CSS Business Card </h1>
+			<p> A e-business card written in pure CSS3 that allows for 3D rotation to expose front and back sides. Hold the mouse button down on the card to flip it.</p>
+			</div>
+
+			<div class="card-container center" ontouchstart="this.classList.toggle('hover');">
+				<div class="flipper">
+					<div class="front">
+						<div class="nav">
+							<ul>
+								<li><a href="https://www.facebook.com/anthony.delciotto" target="_blank"><img class="icon" src="res/icons/facebook-square.png"></a></li>
+								<li><a href="https://twitter.com/Anthony_DelC" target="_blank"><img class="icon" src="res/icons/twitter.png"></a></li>
+								<li><a href="http://www.linkedin.com/pub/anthony-del-ciotto/84/642/130" target="_blank"><img class="icon" src="res/icons/linkedin.png"></a></li>
+								<li><a href="https://github.com/anthdeldev" target="_blank"><img class="icon" src="res/icons/github.png"></a></li>
+							</ul>
+						</div>
+
+						<div id="name" class="title-entry">Anthony Del Ciotto</div>
+						<div id="job-title" class="info-entry">Software Developer / Student / Designer</div>
+						<div id="website" class="info-entry"><a href="http://www.anthonydel.com/" target="_blank">www.anthonydel.com</a></div>
+						<div id="email" class="info-entry">anthdel.developer@gmail.com</div>
+						<div id="phone" class="info-entry">+61 (04) 34 032 660</div>
+						<div id="location" class="info-entry">Melbourne, Australia</div>
+					</div>
+
+					<div class="back">
+						<div class="back-img-caption">
+							<p>Insert company icon below</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<footer>
+			<small class="sharing">
+					<a href="http://twitter.com/share" class="twitter-share-button" data-text="Pure CSS Business Card by @Anthony_DelC" data-url="http://www.anthonydel.com/projects/business-card/index.html" data-count="small" data-related="anthonydelciotto"></a> </small>
+				<small class="outro"> By <a href="http://www.anthonydel.com/" target="_blank">Anthony Del Ciotto</a> </small>
+			</footer>
+
+		</div>
+
+		<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	</body>
+</html>
